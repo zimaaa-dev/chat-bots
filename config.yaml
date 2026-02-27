@@ -1,0 +1,6 @@
+FIRST_MESSAGE: 'Добро пожаловать! Для начала работы нажмите кнопку НАЧАТЬ'
+FILENAME_MESSAGE: 'Введите название файла для сохранения результатов'
+FILENAME_ID_MESSAGE: 'Ваши результаты сохранены под ID файла'
+REQUEST_FILENAME: true
+REQUEST_USER: false
+TYPE_BUTTONS: 'reply'
