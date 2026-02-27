@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="mb-4">Опросник</h1>
+    <div class="question-box">
+        <p class="lead">{{ config.FIRST_MESSAGE }}</p>
+        
+        <form method="POST" action="{{ url_for('start_questionnaire') }}">
+            <div class="mb-3">
+                <label for="price_name" class="form-label">Выберите прайс-лист:</label>
+                <select class="form-select" id="price_name" name="price_name" required>
+                    <option value="">-- Выберите вариант --</option>
+                    {% for price in price_names %}
+                    <option value="{{ price }}">Прайс {{ price }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg">НАЧАТЬ</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
